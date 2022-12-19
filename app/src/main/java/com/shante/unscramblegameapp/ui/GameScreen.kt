@@ -25,6 +25,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
@@ -191,16 +192,28 @@ private fun FinalScoreDialog(
             // button. If you want to disable that functionality, simply use an empty
             // onCloseRequest.
         },
-        title = { Text(stringResource(R.string.congratulations)) },
-        text = { Text(stringResource(R.string.you_scored, score)) },
-        modifier = modifier,
+        title = {
+            Text(
+                text = stringResource(R.string.congratulations),
+                color = Color.Black
+            )
+        },
+        text = {
+            Text(
+                text = stringResource(R.string.you_scored, score),
+                color = Color.Black
+            )
+        },
+        backgroundColor = Color.White,
         dismissButton = {
             TextButton(
                 onClick = {
                     activity.finish()
                 }
             ) {
-                Text(text = stringResource(R.string.exit))
+                Text(
+                    text = stringResource(R.string.exit),
+                )
             }
         },
         confirmButton = {
