@@ -3,5 +3,6 @@
 
     <style name="Theme.UnscrambleGameApp" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
     </style>
 </resources>
